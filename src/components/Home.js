@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+import "./Home.css";
+import ImgSlider from "./ImgSlider";
+import Viewers from "./Viewers";
 
 const Home = () => {
-    return (
-        <div>
-            home
-        </div>
-    )
-}
+  return (
+    <div className="home">
+      <ImgSlider />
+      <Viewers />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
