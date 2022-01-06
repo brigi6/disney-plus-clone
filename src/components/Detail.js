@@ -38,7 +38,9 @@ const Detail = () => {
         </button>
       </div>
       <div className="details__subtitle">2018 . 7m . Family</div>
-      <div className="details__description">fkdgslkfghfslgfsl</div>
+      <div className="details__description">
+        fkdgslkfghfsliztiuiikhfdlgéldfjfdjdhfjdgghjgdjhjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjklfkhlgéfdklkhélkhfélkkkkkkkkkkkkkkkkkkkiztizttigjéfjzpzopopolőhűléúiéiőohlkjéjéhiuélhjfkfhhfjklfhlkflfhlákdslahfdsljgféjluoőiűúrtuzrzrfcbgfsl
+      </div>
     </div>
   );
 };

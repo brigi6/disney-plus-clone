@@ -52,3 +52,18 @@ a:hover ::after {
   border-radius: 50%;
   cursor: pointer;
 }
+.loginbutton {
+  color: white;
+  background-color: #040714;
+  border: none;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  padding: 8px 15px;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+}
+.loginbutton:hover {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import ImgSlider from "./ImgSlider";
 import Movies from "./Movies";

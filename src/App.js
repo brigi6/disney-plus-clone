@@ -2,11 +2,12 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import Detail from "./components/Detail";
-import { Counter } from "./features/counter/Counter";
+
 import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Login from "./components/Login";
+import HeaderLogin from "./components/HeaderLogin";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
             path="login"
             element={
               <>
-                <Header />
+                <HeaderLogin />
                 <Login />
               </>
             }
