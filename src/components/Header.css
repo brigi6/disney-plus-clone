@@ -51,6 +51,7 @@ a:hover ::after {
   height: 48px;
   border-radius: 50%;
   cursor: pointer;
+  opacity: 50%;
 }
 .loginbutton {
   color: white;

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -10,9 +11,13 @@ const Header = () => {
         style={{ width: "80px", objectFit: "contain" }}
       />
       <div className="header__navmenu">
+        {" "}
         <a>
           <img src="/images/home-icon.svg" alt="homeicon" />
-          <span>HOME</span>
+          <Link to="/home">
+            {" "}
+            <span>HOME</span>
+          </Link>{" "}
         </a>
         <a>
           <img src="/images/search-icon.svg" alt="homeicon" />
@@ -35,7 +40,11 @@ const Header = () => {
           <span>SERIES</span>
         </a>
       </div>
-      <img src="/images/avatar.png" alt="" className="header__userimage" />
+      <img
+        src="/images/PngItem_1419358.png"
+        alt=""
+        className="header__userimage"
+      />
     </div>
   );
 };

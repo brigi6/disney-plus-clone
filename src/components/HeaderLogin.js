@@ -41,7 +41,7 @@ const HeaderLogin = () => {
   };
 
   useEffect(() => {
-    userName ? navigate("/", { replace: "true" }) : console.log("no user");
+    userName ? navigate("/home", { replace: "true" }) : console.log("no user");
   }, [userName]);
 
   console.log(userName);

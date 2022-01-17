@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="login"
+            path="/"
             element={
               <>
                 <HeaderLogin />
@@ -24,7 +24,7 @@ function App() {
             }
           />
           <Route
-            path="/"
+            path="/home"
             element={
               <>
                 <Header />
@@ -33,7 +33,7 @@ function App() {
             }
           />
           <Route
-            path="detail"
+            path="/detail/:id"
             element={
               <>
                 <Header />

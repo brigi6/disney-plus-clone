@@ -1,17 +1,37 @@
 import React from "react";
 import "./Detail.css";
+import db from "../firebase";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import YouTube from "react-youtube";
 
 const Detail = () => {
+  const { id } = useParams();
+  const [detailData, setDetailData] = useState({});
+
+  useEffect(() => {
+    db.collection("movies")
+      .doc(id)
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          setDetailData(doc.data());
+        } else {
+          console.log("no such document in firebase 🔥");
+        }
+      })
+      .catch((error) => {
+        console.log("Error getting document:", error);
+      });
+  }, [id]);
+
   return (
     <div className="detail">
       <div className="background">
-        <img
-          src="https://www.awn.com/sites/default/files/styles/original/public/image/featured/1048902-delve-making-pixars-bao-new-featurette.jpg"
-          alt="film"
-        />
+        <img src={detailData.backgroundImg} alt={detailData.title} />
       </div>
       <div className="image__title">
-        <img src="/images/baologo.png" alt="" />
+        <img src={detailData.titleImg} alt={detailData.title} />
       </div>
       <div className="detail__controls">
         <button className="details__playbutton">
@@ -37,10 +57,9 @@ const Detail = () => {
           <img src="/images/group-icon.png" alt="" />
         </button>
       </div>
-      <div className="details__subtitle">2018 . 7m . Family</div>
-      <div className="details__description">
-        fkdgslkfghfsliztiuiikhfdlgéldfjfdjdhfjdgghjgdjhjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjklfkhlgéfdklkhélkhfélkkkkkkkkkkkkkkkkkkkiztizttigjéfjzpzopopolőhűléúiéiőohlkjéjéhiuélhjfkfhhfjklfhlkflfhlákdslahfdsljgféjluoőiűúrtuzrzrfcbgfsl
-      </div>
+
+      <div className="details__subtitle">{detailData.subTitle}</div>
+      <div className="details__description">{detailData.description}</div>
     </div>
   );
 };

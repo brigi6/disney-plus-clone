@@ -1,6 +1,6 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
-
+import "firebase/compat/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyDKOJ9IxaUy4M6y7q4mFKW-ezplflVWwaM",
   authDomain: "disneyplus-clone-18ecf.firebaseapp.com",
@@ -12,8 +12,9 @@ const firebaseConfig = {
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
-
+const db = firebaseApp.firestore();
 const auth = firebaseApp.auth();
 const provider = new firebase.auth.GoogleAuthProvider();
 
 export { auth, provider };
+export default db;
